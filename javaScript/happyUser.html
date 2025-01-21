@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy User</title>
+</head>
+
+<body>
+    <form name="forme">
+        <lable>inter a number</lable>
+        <input type="text" name="num">
+        <input type="button" value="send" onclick="writeHappy()">
+    </form>
+    <script>
+    
+        function writeHappy() {
+            let a = document.forme.num.value;
+            for (let i = 1; i <= a; i++) {
+                document.write(" happy<br>");
+                console.log("a = " + a);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript CSS</title>
+</head>
+<body>
+    <h1 id="head">Click the Button</h1>
+    <button onclick="red()">red</button>
+
+    <script>
+        function red(){
+            const head = document.getElementById("head");
+            head.style.color = "red";
+            head.style.backgroundColor = "black";
+            head.style.fontSize = "3rem";
+            head.style.fontFamily = "impact";
+            document.body.style.backgroundColor = '#fc0';
+        }
+    </script>
+</body>
+</html>

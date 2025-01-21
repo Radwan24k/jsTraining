@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function 2</title>
+</head>
+
+<body>
+    <aside id="box"></aside>
+    <button id="btn">Click Me</button>
+
+    <script>
+        document.getElementById('btn').onclick = function () {
+            const box = document.getElementById('box');
+            box.innerHTML = 'Anonnymous Function Is Fun!';
+            box.style.color = 'white';
+            box.style.fontSize = '3rem';
+            box.style.backgroundColor = 'black';    
+        
+        
+        }
+    </script>
+</body>
+
+</html>

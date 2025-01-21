@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.open</title>
+    <style>
+        body {
+            font-size: 3rem;
+            font-family: arial;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.walla.co.il">Walla</a><br>
+    <a href="#" onclick="go2()">Walla</a><br>
+    <a href="https://www.mako.co.il" onclick="go3()">Mako</a><br>
+
+    <script>
+        function go2() {
+            document.location = "https://www.walla.co.il";
+        }
+        function go3() {
+            window.open("https://www.walla.co.il", "walla", "width=700,height=700");
+        }
+    </script>
+</body>
+
+</html>

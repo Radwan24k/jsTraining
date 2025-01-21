@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Her Color</title>
+    <style>
+        label {
+            display: block;
+            color: maroon;
+            font-family: arial;
+            font-size: 1.2rem;
+        }
+
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- form>label+input+br+input:button -->
+
+    <form name="forme">
+        <label for="">Enter a background color:</label>
+        <input type="text" name="theColor">
+        <br>
+
+        <input type="button" value="Click To Change" onclick="change()">
+    </form>
+    <script>
+        function change() {
+            let userColor = document.forme.theColor;
+            if (userColor.value == "red") {
+                document.bgColor = "red";
+            } else {
+                document.bgColor = "yellow";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

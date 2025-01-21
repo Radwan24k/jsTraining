@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Loop</title>
+    <style>
+        label {
+            display: block;
+            font-size: 1.3rem;
+            color: crimson;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    * המשתמש יגדיר איזה מספרים יש לכתוב
+    * כלומר נקודת התחלה ונקודת סוף
+    * למשל מ 10 עד 30 
+    -->
+    <!-- form>(label+input+br)*2+input:button -->
+    <form action="">
+        <label for="">Starting Number:</label>
+        <input type="text" id="fnum">
+        <br>
+        <label for="">Endeing Number:</label>
+        <input type="text" id="scnum">
+        <br>
+        <input type="button" value="Click" id="btn">
+    </form>
+    <script>
+        document.getElementById('btn').onclick = function () {
+            //Type Casting Method 1
+            /*  const fnum = parseFloat(document.getElementById('fnum').value);
+             const scnum = parseFloat(document.getElementById('scnum').value); */
+
+            //Type Casting Method 2
+            /*  const fnum = Number(document.getElementById('fnum').value);
+             const scnum = Number(document.getElementById('scnum').value); */
+
+            //Type Casting Method 3
+            const fnum = +(document.getElementById('fnum').value);
+            const scnum = +(document.getElementById('scnum').value);
+
+            for (let x = fnum; x <= scnum; x++) {
+                document.write('x = ' + x + '<br>');
+            }
+        }
+    </script>
+</body>
+
+</html>

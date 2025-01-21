@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+
+<body>
+    <form name="forme">
+        <input type="text" name="clock">
+    </form>
+    <script>
+        function runTime() {
+            let watch = document.forme.clock;
+            let theTime = new Date();
+            let hr = theTime.getHours();
+            let mn = theTime.getMinutes();
+            let sc = theTime.getSeconds();
+            watch.value = hr + ":" + mn + ":" + sc;
+            setTimeout(runTime, 1000);
+        }
+        runTime();
+    </script>
+</body>
+
+</html>

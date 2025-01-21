@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+
+<body>
+    <aside>
+        <form name="forme">
+            <input type="text" name="clock">
+        </form>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+    </aside>
+    <script>
+        let global;
+        function runTime() {
+            let watch = document.forme.clock;
+            let theTime = new Date();
+            let hr = theTime.getHours();
+            let mn = theTime.getMinutes();
+            let sc = theTime.getSeconds();
+            if (sc < 10) {
+                sc = "0" + sc;
+            }
+            if (mn < 10) {
+                mn = "0" + mn;
+            }
+            if (hr > 12) {
+                hr = hr - 12;
+                watch.value = hr + ":" + mn + ":" + sc + " PM";
+            } else {
+                watch.value = hr + ":" + mn + ":" + sc + " AM";
+            }
+        }
+        document.getElementById('start').onclick = function () {
+            global = setInterval(runTime, 100);
+        };
+        document.getElementById('stop').onclick = function () {
+            clearInterval(global);
+        };
+    </script>
+</body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+
+        //Global Variable
+        var global = 10000;
+        function go2() {
+            //local Variable
+            var a = 10;
+            alert("a=" + a);
+            alert(global);
+        }
+        function go3() {
+            //local Variable
+            var b = 20;
+            alert(global);
+        }
+        go2();
+        go3();
+    </script>
+</body>
+</html>

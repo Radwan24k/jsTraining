@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transition</title>
+    <style>
+        section {
+            width: 800px;
+            height: 600px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        img.top:hover {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="images/winter.jpg" alt="winter">
+        <img src="images/summer.jpg" alt="summer" class="top">
+    </section>
+</body>
+
+</html>

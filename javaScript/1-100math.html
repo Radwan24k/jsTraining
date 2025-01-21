@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-100 Math</title>
+</head>
+
+<body>
+    <script>
+        let counter = 1;
+        document.write('<table border="3">');
+        for (let z = 0; z < 10; z++) {
+            document.write('<tr>');
+            for (let y = 1; y <= 10; y++) {
+                if (counter % 2 == false) {
+                    document.write('<td style="background-color:red">' + counter + '</td>');
+                } else {
+                    document.write('<td>' + counter + '</td>');
+                }
+                counter++;
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+
+</html>

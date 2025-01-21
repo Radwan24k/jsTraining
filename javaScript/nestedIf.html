@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested if</title>
+</head>
+
+<body>
+    <!-- form>label+input+br+input:button -->
+    <form name="forme">
+        <label for="">Enter The Background Color:</label>
+        <input type="text" name="user">
+        <br>
+        <input type="button" value="Click To Change" onclick="change()">
+    </form>
+    <script>
+        function change() {
+            let userColor = document.forme.user.value;
+            if (userColor == "red") {
+                document.bgColor = "red";
+            } else if (userColor == "green") {
+                document.bgColor = "green";
+            } else {
+                document.bgColor = "#000";
+            }
+        }
+    </script>
+</body>
+
+</html>

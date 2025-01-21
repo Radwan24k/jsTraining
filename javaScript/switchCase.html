@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <form name="forme">
+        <label for="">Enter Password:</label>
+        <input type="text" name="user">
+        <br>
+        <input type="button" value="Click To Enter" onclick="check()">
+    </form>
+    <script>
+        function check() {
+            let userPass = document.forme.user;
+            switch (userPass.value) {
+                case "111":
+                    document.location = "https://google.com";
+                    break;
+                case "222":
+                    document.location = "https://youtube.com";
+                    break;
+                case "333":
+                case "444":
+                case "555":
+                    document.location = "https://facebook.com";
+                    break;
+                default:
+                    document.location = "https://bing.com";
+            }
+        }
+    </script>
+</body>
+</html>
